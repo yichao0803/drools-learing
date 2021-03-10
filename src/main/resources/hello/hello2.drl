@@ -1,0 +1,11 @@
+package com.zyccx.drools;
+
+import com.zyccx.drools.model.Message;
+
+rule "global-demo"
+    salience -99
+    when
+        $message: Message(target.equals("beggar"))
+    then
+        System.out.println(temp);
+    end

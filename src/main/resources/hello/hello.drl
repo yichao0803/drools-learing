@@ -31,7 +31,7 @@ rule "chat-and-goodbye"
         $message: Message(Message.MessageType.CHAT.equals(messageType) && target!=null)
     then
         print($message.getTarget() +  ", nice to meet you. But I have to go.");
-        //将MessageType设置成GOODBYE
+        //将MessageType设置成 GOODBYE
         $message.setMessageType(Message.MessageType.GOODBYE);
         //更新fact,以便触发规则"say-goodbye"
         update($message);
